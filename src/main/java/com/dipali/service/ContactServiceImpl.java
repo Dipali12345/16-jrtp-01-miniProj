@@ -15,7 +15,7 @@ public class ContactServiceImpl implements ContactService {
 	
 	public boolean saveContact(Contact contact) {
 		contactRepository.save(contact);
-		return false;
+		return true;
 	}
 
 	public List<Contact> getAllContact() {
@@ -24,13 +24,13 @@ public class ContactServiceImpl implements ContactService {
 	}
 
 	public Contact getContactById(Integer contactId) {
-		contactRepository.getById(contactId);
-		return null;
+		 contactRepository.getById(contactId);
+		return contact;
 	}
 
 	public boolean deleteContactById(Integer contactId) {
 		contactRepository.deleteById(contactId);
-		return false;
+		return true;
 	}
 
 }
